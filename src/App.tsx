@@ -7,6 +7,7 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
+import Button from "./components/Button";
 
 function App() {
   const person = {
@@ -40,6 +41,9 @@ function App() {
       <Oscar>
         <Heading>oscar goes to Yalım Gürbüz</Heading>
       </Oscar>
+      <Button
+        handleClick={(event, id) => console.log("Button clicked", event, id)}
+      />
     </div>
   );
 }
