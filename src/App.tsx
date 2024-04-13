@@ -4,6 +4,7 @@ import "./App.css";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
 
 function App() {
   const person = {
@@ -32,6 +33,7 @@ function App() {
       <Greet name="ylm" messageCount={10} isLoggedIn={true} />
       <Person name={person} />
       <PersonList name={nameList} />
+      <Status status="loading" />
     </div>
   );
 }
