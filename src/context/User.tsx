@@ -3,7 +3,7 @@ import { UserContext } from "./UserContext";
 
 export const User = () => {
   const userContext = useContext(UserContext);
-  const handleLogin = () => {
+  const handleLogin1 = () => {
     // if (userContext) {
     userContext.setUser({
       name: "Vishwas",
@@ -11,17 +11,17 @@ export const User = () => {
     });
     // }
   };
-  const handleLogout = () => {
+  const handleLogout1 = () => {
     // if (userContext) {
     userContext.setUser(null);
     // }
   };
   return (
     <div>
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
-      <div>User name is {userContext.user?.name}</div>
-      <div>User email is {userContext.user?.email}</div>
+      <button onClick={handleLogin1}>Login</button>
+      <button onClick={handleLogout1}>Logout</button>
+      <div>User name {userContext.user?.name}</div>
+      <div>User email {userContext.user?.email}</div>
       {/* <div>User name is {userContext?.user?.name}</div>
       <div>User email is {userContext?.user?.email}</div> */}
     </div>
