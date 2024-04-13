@@ -11,6 +11,8 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
 import User from "./components/User";
+import { Box } from "./context/Box";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 function App() {
   const person = {
@@ -53,6 +55,9 @@ function App() {
         handleChange={(event) => console.log(event.target.value)}
       />
       <User name="Yalım Gürbüz" email="ylmgrbz@gmail.com" />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
