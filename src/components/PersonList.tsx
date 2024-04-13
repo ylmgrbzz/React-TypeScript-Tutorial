@@ -1,11 +1,17 @@
 import React from "react";
 
-const PersonList = () => {
+type PersonListProps = {
+  name: { first: string; last: string }[];
+};
+
+const PersonList = (props: PersonListProps) => {
   return (
     <div>
-      <h2>gürbüz yalım</h2>
-      <h2>gürbüz yalım2</h2>
-      <h2>gürbüz yalım3</h2>
+      {props.name.map((name, index) => (
+        <h2 key={index}>
+          {name.first} {name.last}
+        </h2>
+      ))}
     </div>
   );
 };
