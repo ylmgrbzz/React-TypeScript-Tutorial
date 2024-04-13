@@ -10,9 +10,11 @@ import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
-import User from "./components/User";
+// import User from "./components/User";
 import { Box } from "./context/Box";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import { UserContextProvider } from "./context/UserContext";
+import { User } from "./context/User";
 
 function App() {
   const person = {
@@ -54,10 +56,13 @@ function App() {
         value=""
         handleChange={(event) => console.log(event.target.value)}
       />
-      <User name="Yalım Gürbüz" email="ylmgrbz@gmail.com" />
+      {/*   <User name="Yalım Gürbüz" email="ylmgrbz@gmail.com" /> */}
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
