@@ -1,7 +1,11 @@
 import React from "react";
 
-const Oscar = () => {
-  return <div>Oscar</div>;
+type OscarProps = {
+  children: React.ReactNode;
+};
+
+const Oscar = (props: OscarProps) => {
+  return <div>{props.children}</div>;
 };
 
 export default Oscar;

@@ -5,6 +5,8 @@ import Greet from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
 
 function App() {
   const person = {
@@ -34,6 +36,10 @@ function App() {
       <Person name={person} />
       <PersonList name={nameList} />
       <Status status="loading" />
+      <Heading>Placeholder</Heading>
+      <Oscar>
+        <Heading>oscar goes to Yalım Gürbüz</Heading>
+      </Oscar>
     </div>
   );
 }
